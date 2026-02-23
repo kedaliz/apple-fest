@@ -1,0 +1,124 @@
+.header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo-figure {
+    margin: 0;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.75rem;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-figure a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 140px;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    animation: fadeInDown 0.8s ease-out forwards;
+}
+
+.header-content {
+    flex: 1;
+    animation: fadeInUp 0.8s ease-out 0.2s forwards;
+    text-align: center;
+}
+
+.title {
+    font-size: clamp(2.8rem, 8vw, 4.5rem);
+    color: white;
+    margin: 0;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    line-height: 1.2;
+    word-break: break-word;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0.5rem 0 0 0;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 2rem 1rem;
+    }
+
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .header-content {
+        text-align: center;
+    }
+
+    .logo-figure {
+        padding: 0.75rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .title {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+}

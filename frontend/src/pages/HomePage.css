@@ -1,0 +1,210 @@
+.home-page {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.hero {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.info-section {
+    margin-bottom: 3rem;
+}
+
+.section-header {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.logistics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.logistics-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: var(--transition);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.logistics-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.logistics-card h3 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.logistics-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.logistics-card li {
+    padding: 0.5rem 0;
+    color: #555;
+}
+
+.logistics-card li::before {
+    content: "✓ ";
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.history-section {
+    background: var(--tertiary-color);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    margin-bottom: 3rem;
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.history-text h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.history-text p {
+    color: #555;
+    line-height: 1.8;
+}
+
+.history-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    color: white;
+}
+
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.sidebar-content {
+    flex: 1;
+}
+
+.sidebar-image {
+    flex: 1;
+}
+
+.sidebar-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.sidebar h4 {
+    color: var(--tertiary-color);
+    font-size: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.sidebar p {
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.dates-list {
+    list-style: none;
+    padding: 0;
+}
+
+.dates-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.dates-list li::before {
+    content: "📅 ";
+    margin-right: 0.5rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .section-header {
+        font-size: 1.5rem;
+    }
+
+    .history-content {
+        grid-template-columns: 1fr;
+    }
+
+    .logistics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
